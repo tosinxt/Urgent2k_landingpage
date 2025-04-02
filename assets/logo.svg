@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <style>
+    .logo-text { font-family: 'Arial', sans-serif; font-weight: bold; }
+    .urgent { fill: #ffffff; }
+    .number { fill: #00d967; }
+    .glow { filter: drop-shadow(0 0 5px rgba(0, 214, 103, 0.8)); }
+  </style>
+  <g class="glow">
+    <text x="10" y="40" class="logo-text urgent" font-size="32">Urgent</text>
+    <text x="120" y="40" class="logo-text number" font-size="32">2K</text>
+  </g>
+</svg>

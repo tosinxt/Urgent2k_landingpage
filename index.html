@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urgent 2K - Coming Soon</title>
+    <meta name="description" content="Urgent 2K - Nigeria's Premier Task Marketplace. Post tasks, bid on jobs, and earn money securely.">
+    <meta property="og:title" content="Urgent 2K - Coming Soon">
+    <meta property="og:description" content="Nigeria's Premier Task Marketplace. Post tasks, bid on jobs, and earn money securely.">
+    <meta property="og:image" content="assets/preview.svg">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <div class="particles-container" id="particles-js"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/logo.svg" alt="Urgent2K Logo" class="logo-img">
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </header>
+
+        <main>
+            <div class="hero">
+                <div class="hero-content">
+                    <h2>Nigeria's Premier Task Marketplace</h2>
+                    <h3>Coming Soon</h3>
+                    <p>Post tasks, bid on jobs, and earn money securely with our escrow payment system and verified users.</p>
+                    
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-illustration">
+                    <div class="floating-elements">
+                        <div class="floating-element task-card">
+                            <div class="task-icon"><i class="fas fa-tasks"></i></div>
+                            <div class="task-content">
+                                <h4>Delivery Task</h4>
+                                <p>₦2,000</p>
+                            </div>
+                        </div>
+                        <div class="floating-element user-card">
+                            <div class="user-avatar"><i class="fas fa-user"></i></div>
+                            <div class="user-rating">★★★★★</div>
+                        </div>
+                        <div class="floating-element payment-card">
+                            <div class="payment-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="payment-text">Secure</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile UI elements that only show on mobile -->
+                    <div class="mobile-ui">
+                        <div class="mobile-header">
+                            <img src="assets/logo.svg" alt="Urgent2K Logo" class="mobile-logo">
+                        </div>
+                        <div class="mobile-task">
+                            <div class="mobile-task-icon"><i class="fas fa-tasks"></i></div>
+                            <div class="mobile-task-content">
+                                <h4>Delivery Task</h4>
+                                <p>₦2,000</p>
+                            </div>
+                        </div>
+                        <div class="mobile-user">
+                            <div class="mobile-user-avatar"><i class="fas fa-user"></i></div>
+                            <div class="mobile-user-rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="waitlist-section">
+                <div class="waitlist-content">
+                    <h3>Join Our Waitlist</h3>
+                    <p>Be the first to know when we launch and get early access to the platform.</p>
+                    
+                    <form id="waitlist-form" class="waitlist-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>I'm interested as a...</option>
+                                <option value="taskOwner">Task Owner</option>
+                                <option value="tasker">Tasker</option>
+                                <option value="both">Both</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="waitlist-btn">Join Waitlist</button>
+                    </form>
+                    
+                    <div class="waitlist-stats">
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">People on waitlist</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Cities covered</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features">
+                <h3>What to Expect</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h4>Task Posting & Bidding</h4>
+                        <p>Post tasks or bid on jobs with our flexible pricing system. Set fixed prices or accept bids from taskers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>Secure Payments</h4>
+                        <p>Our escrow system protects both parties. Funds are only released when work is completed and approved.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <h4>Verified Users</h4>
+                        <p>All users undergo KYC verification with NIN/BVN to ensure a safe and trustworthy community.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile & Web Access</h4>
+                        <p>Access Urgent2K from any device with our responsive web and mobile applications.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Rewards & Leaderboards</h4>
+                        <p>Earn points for completing tasks, referring friends, and maintaining good ratings.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-gavel"></i>
+                        </div>
+                        <h4>Dispute Resolution</h4>
+                        <p>Our fair dispute resolution system ensures all parties are treated fairly when conflicts arise.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.svg" alt="Urgent2K Logo" class="footer-logo-img">
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <p>&copy; 2025 Urgent2K. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
