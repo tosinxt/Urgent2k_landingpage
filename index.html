@@ -19,14 +19,22 @@
     
     <div class="container">
         <header>
-            <div class="logo">
-                <img src="assets/logo.svg" alt="Urgent2K Logo" class="logo-img">
-            </div>
-            <div class="social-links">
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <div class="header-container">
+                <div class="logo">
+                    <img src="assets/logo.svg" alt="Urgent2K Logo" class="logo-img">
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="nav-link">Features</a></li>
+                        <li><a href="#" class="nav-link">Waitlist</a></li>
+                        <li><a href="#" class="nav-button">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </header>
 
@@ -58,6 +66,7 @@
                 </div>
                 
                 <div class="hero-illustration">
+                    <!-- Desktop floating elements -->
                     <div class="floating-elements">
                         <div class="floating-element task-card">
                             <div class="task-icon"><i class="fas fa-tasks"></i></div>
@@ -75,22 +84,58 @@
                             <div class="payment-text">Secure</div>
                         </div>
                     </div>
-                    
-                    <!-- Mobile UI elements that only show on mobile -->
-                    <div class="mobile-ui">
-                        <div class="mobile-header">
-                            <img src="assets/logo.svg" alt="Urgent2K Logo" class="mobile-logo">
-                        </div>
-                        <div class="mobile-task">
-                            <div class="mobile-task-icon"><i class="fas fa-tasks"></i></div>
-                            <div class="mobile-task-content">
-                                <h4>Delivery Task</h4>
-                                <p>₦2,000</p>
+                </div>
+                
+                <!-- Mobile app mockup (separate from hero-illustration) -->
+                <div class="mobile-app-mockup">
+                    <div class="mobile-app-screen">
+                        <div class="mobile-app-status-bar">
+                            <div class="status-time">9:41</div>
+                            <div class="status-icons">
+                                <i class="fas fa-wifi"></i>
+                                <i class="fas fa-battery-full"></i>
                             </div>
                         </div>
-                        <div class="mobile-user">
-                            <div class="mobile-user-avatar"><i class="fas fa-user"></i></div>
-                            <div class="mobile-user-rating">★★★★★</div>
+                        <div class="mobile-app-header">
+                            <img src="assets/logo.svg" alt="Urgent2K Logo" class="mobile-logo">
+                        </div>
+                        <div class="mobile-app-content">
+                            <div class="mobile-app-section">
+                                <h4 class="section-title">Available Tasks</h4>
+                                <div class="mobile-task">
+                                    <div class="mobile-task-icon"><i class="fas fa-tasks"></i></div>
+                                    <div class="mobile-task-content">
+                                        <h4>Delivery Task</h4>
+                                        <p>₦2,000</p>
+                                        <div class="task-location"><i class="fas fa-map-marker-alt"></i> Lekki, Lagos</div>
+                                    </div>
+                                </div>
+                                <div class="mobile-task">
+                                    <div class="mobile-task-icon"><i class="fas fa-home"></i></div>
+                                    <div class="mobile-task-content">
+                                        <h4>Home Cleaning</h4>
+                                        <p>₦5,000</p>
+                                        <div class="task-location"><i class="fas fa-map-marker-alt"></i> Ikeja, Lagos</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-app-section">
+                                <h4 class="section-title">Top Taskers</h4>
+                                <div class="mobile-tasker">
+                                    <div class="tasker-avatar"><i class="fas fa-user"></i></div>
+                                    <div class="tasker-info">
+                                        <h4>John D.</h4>
+                                        <div class="tasker-rating">★★★★★ <span>(32)</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mobile-app-nav">
+                                <div class="nav-item active"><i class="fas fa-home"></i></div>
+                                <div class="nav-item"><i class="fas fa-search"></i></div>
+                                <div class="nav-item"><i class="fas fa-plus-circle"></i></div>
+                                <div class="nav-item"><i class="fas fa-bell"></i></div>
+                                <div class="nav-item"><i class="fas fa-user"></i></div>
+                            </div>
                         </div>
                     </div>
                 </div>

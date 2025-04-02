@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Set the launch date (3 months from now)
-    const launchDate = new Date();
+    const launchDate = new Date('2025-07-01T00:00:00');
     launchDate.setMonth(launchDate.getMonth() + 3);
     
     // Update countdown every second
@@ -136,6 +136,19 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('seconds').textContent = '00';
         }
     }, 1000);
+    
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    
+    if (menuToggle) {
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            if (mainNav) {
+                mainNav.classList.toggle('active');
+            }
+        });
+    }
     
     // Handle the waitlist form submission
     const waitlistForm = document.getElementById('waitlist-form');
