@@ -150,36 +150,63 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Handle the waitlist form submission
+    // Waitlist form submission
     const waitlistForm = document.getElementById('waitlist-form');
+    const successMessage = document.getElementById('success-message');
+
     if (waitlistForm) {
         waitlistForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(this);
-            const formDataObj = {};
-            formData.forEach((value, key) => {
-                formDataObj[key] = value;
-            });
+            // Get email from form
+            const email = this.querySelector('input[type="email"]').value;
             
-            // Here you would normally send this to a backend API
-            // For now, we'll just show a success message
-            this.innerHTML = `
-                <div class="success-message">
-                    <h4>Thank you for joining our waitlist!</h4>
-                    <p>We'll notify you when Urgent2K launches.</p>
-                </div>
-            `;
+            // Update button state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
             
-            // Simulate updating the waitlist count
-            const statNumber = document.querySelector('.stat-number');
-            if (statNumber && statNumber.textContent.includes('+')) {
-                const currentCount = parseInt(statNumber.textContent);
-                if (!isNaN(currentCount)) {
-                    statNumber.textContent = (currentCount + 1) + '+';
+            submitButton.textContent = 'Submitting...';
+            submitButton.disabled = true;
+            
+            // Send form data to Formspree
+            fetch(this.action, {
+                method: this.method,
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
                 }
-            }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response was not ok.');
+            })
+            .then(data => {
+                // Hide the form
+                waitlistForm.style.display = 'none';
+                
+                // Show success message
+                if (successMessage) {
+                    successMessage.style.display = 'block';
+                    successMessage.scrollIntoView({ behavior: 'smooth' });
+                }
+                
+                // Update stats count (optional)
+                const statNumber = document.querySelector('.stat-number');
+                if (statNumber && statNumber.textContent.includes('+')) {
+                    const currentCount = parseInt(statNumber.textContent);
+                    if (!isNaN(currentCount)) {
+                        statNumber.textContent = (currentCount + 1) + '+';
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                alert('There was a problem submitting your email. Please try again.');
+            });
         });
     }
     
