@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Set the launch date (3 months from now)
-    const launchDate = new Date('2025-07-01T00:00:00');
+    const launchDate = new Date('2025-04-01T00:00:00');
     launchDate.setMonth(launchDate.getMonth() + 3);
     
     // Update countdown every second
