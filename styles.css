@@ -7,7 +7,7 @@
     --accent-color: #ffc107; /* Yellow accent */
     --text-color: #ffffff;
     --text-secondary: #cccccc;
-    --bg-color: #050505;
+    --bg-color: #050505; /* Solid dark background */
     --bg-secondary: #0a0a0a;
     
     /* Gradients */
@@ -32,7 +32,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background-color: var(--bg-color); /* Solid background color */
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
@@ -657,7 +657,7 @@ footer p {
 /* Responsive Styles */
 @media (max-width: 768px) {
     body {
-        background: linear-gradient(to bottom, #050505, #0a0a2a);
+        background: #050505;
     }
     
     .container {
