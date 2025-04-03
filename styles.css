@@ -1,17 +1,25 @@
 :root {
-    --primary-color: #00a651;
-    --primary-gradient: linear-gradient(135deg, #00a651 0%, #00d967 100%);
-    --secondary-color: #0056b3;
-    --accent-color: #ffc107;
-    --dark-color: #333;
-    --light-color: #f8f9fa;
-    --text-color: #444;
-    --border-radius: 8px;
-    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    --neon-shadow: 0 0 15px rgba(0, 166, 81, 0.7);
+    /* Color palette */
+    --primary-color: #0056b3; /* Solid blue */
+    --primary-dark: #003d80; /* Darker blue */
+    --primary-light: #4d8fdb; /* Lighter blue */
+    --secondary-color: #00a651; /* Previous primary green now secondary */
+    --accent-color: #ffc107; /* Yellow accent */
+    --text-color: #ffffff;
+    --text-secondary: #cccccc;
+    --bg-color: #050505;
+    --bg-secondary: #0a0a0a;
+    
+    /* Gradients */
+    --primary-gradient: #0056b3; /* Changed from gradient to solid */
+    --glass-bg: rgba(10, 10, 10, 0.7);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Effects */
     --transition: all 0.3s ease;
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.2);
+    --border-radius: 20px;
+    --box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    --neon-shadow: none; /* Removed neon shadow */
 }
 
 * {
@@ -24,7 +32,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: #050505;
+    background-color: var(--bg-color);
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
@@ -71,7 +79,7 @@ header {
 .logo-img {
     height: 40px;
     width: auto;
-    filter: drop-shadow(0 0 5px rgba(0, 166, 81, 0.5));
+    filter: drop-shadow(0 0 5px rgba(0, 86, 179, 0.5));
 }
 
 .main-nav ul {
@@ -97,7 +105,7 @@ header {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--primary-gradient);
+    background: var(--primary-color);
     transition: var(--transition);
 }
 
@@ -110,7 +118,7 @@ header {
 }
 
 .nav-button {
-    background: var(--primary-gradient);
+    background: var(--primary-color);
     color: white;
     text-decoration: none;
     padding: 10px 20px;
@@ -122,7 +130,7 @@ header {
 
 .nav-button:hover {
     transform: translateY(-3px);
-    box-shadow: var(--neon-shadow);
+    box-shadow: var(--box-shadow);
 }
 
 .mobile-menu-toggle {
@@ -218,10 +226,7 @@ header {
 
 .hero h3 {
     font-size: 3.5rem;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--primary-color);
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -275,7 +280,6 @@ header {
     font-size: 2rem;
     font-weight: 700;
     color: var(--primary-color);
-    text-shadow: var(--neon-shadow);
 }
 
 .countdown-label {
@@ -301,10 +305,7 @@ header {
 .waitlist-content h3 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--primary-color);
 }
 
 .waitlist-content p {
@@ -342,11 +343,11 @@ header {
 .waitlist-form input:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 10px rgba(0, 166, 81, 0.3);
+    box-shadow: 0 0 10px rgba(0, 86, 179, 0.3);
 }
 
 .waitlist-btn {
-    background: var(--primary-gradient);
+    background: var(--primary-color);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -360,7 +361,7 @@ header {
 
 .waitlist-btn:hover {
     transform: translateY(-3px);
-    box-shadow: var(--neon-shadow);
+    box-shadow: var(--box-shadow);
 }
 
 .waitlist-stats {
@@ -389,7 +390,7 @@ header {
 
 /* Success Message */
 .success-message {
-    background: rgba(0, 166, 81, 0.1);
+    background: rgba(0, 86, 179, 0.1);
     border: 1px solid var(--primary-color);
     border-radius: 15px;
     padding: 25px;
@@ -500,7 +501,7 @@ header {
     position: relative;
     display: inline-block;
     color: white;
-    text-shadow: 0 0 10px rgba(0, 166, 81, 0.3);
+    text-shadow: 0 0 10px rgba(0, 86, 179, 0.3);
 }
 
 .features h3:after {
@@ -511,8 +512,8 @@ header {
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    background: var(--primary-gradient);
-    box-shadow: var(--neon-shadow);
+    background: var(--primary-color);
+    box-shadow: var(--box-shadow);
 }
 
 .feature-grid {
@@ -538,7 +539,7 @@ header {
 
 .feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: var(--neon-shadow);
+    box-shadow: var(--box-shadow);
     border-color: var(--primary-color);
 }
 
@@ -549,11 +550,11 @@ header {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    background: var(--primary-gradient);
+    background: var(--primary-color);
     color: white;
     font-size: 1.8rem;
     margin-bottom: 20px;
-    box-shadow: var(--neon-shadow);
+    box-shadow: var(--box-shadow);
 }
 
 .feature-text {
@@ -582,30 +583,38 @@ header {
 /* Footer */
 footer {
     text-align: center;
-    padding: 30px 0;
-    color: #ccc;
-    font-size: 0.9rem;
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05);
-    border-top: var(--glass-border);
+    border-radius: var(--border-radius);
+    padding: 40px 0;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    border: var(--glass-border);
+    box-shadow: var(--box-shadow);
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
     flex-wrap: wrap;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px 30px;
+}
+
+footer p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 20px;
+    padding: 0 30px;
 }
 
 .footer-logo-img {
     height: 40px;
     width: auto;
-    filter: drop-shadow(0 0 5px rgba(0, 166, 81, 0.5));
+    filter: drop-shadow(0 0 5px rgba(0, 86, 179, 0.5));
 }
 
 .footer-links {
@@ -621,7 +630,6 @@ footer {
 
 .footer-links a:hover {
     color: var(--primary-color);
-    text-shadow: var(--neon-shadow);
 }
 
 .footer-social {
@@ -779,7 +787,7 @@ footer {
     
     .mobile-logo {
         height: 25px;
-        filter: drop-shadow(0 0 5px rgba(0, 166, 81, 0.5));
+        filter: drop-shadow(0 0 5px rgba(0, 86, 179, 0.5));
     }
     
     .mobile-app-content {
@@ -820,7 +828,7 @@ footer {
         width: 40px;
         height: 40px;
         border-radius: 10px;
-        background: var(--primary-gradient);
+        background: var(--primary-color);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -870,7 +878,7 @@ footer {
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background: var(--primary-gradient);
+        background: var(--primary-color);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1065,13 +1073,15 @@ footer {
     
     /* Mobile Footer */
     footer {
-        border-radius: 0;
-        padding: 20px 0;
+        border-radius: 20px;
+        padding: 30px 0;
+        margin: 30px 15px;
     }
     
     .footer-content {
         flex-direction: column;
-        gap: 15px;
+        gap: 25px;
+        padding: 0 20px 20px;
     }
     
     .footer-logo-img {
@@ -1083,11 +1093,11 @@ footer {
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;
+        gap: 20px;
     }
     
     .footer-links a {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
     
     .footer-social {
@@ -1095,8 +1105,13 @@ footer {
     }
     
     .social-icon {
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    footer p {
+        padding: 0 20px;
+        font-size: 0.85rem;
     }
 }
 
