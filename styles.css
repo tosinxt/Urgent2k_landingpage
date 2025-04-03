@@ -657,7 +657,7 @@ footer p {
 /* Responsive Styles */
 @media (max-width: 768px) {
     body {
-        background: linear-gradient(to bottom, #050505, #0a1a0a);
+        background: linear-gradient(to bottom, #050505, #0a0a2a);
     }
     
     .container {
@@ -756,7 +756,7 @@ footer p {
         border-radius: 30px;
         overflow: hidden;
         position: relative;
-        box-shadow: 0 0 30px rgba(0, 166, 81, 0.3), 
+        box-shadow: 0 0 30px rgba(0, 86, 179, 0.3), 
                     0 0 10px rgba(0, 0, 0, 0.5);
         border: 1px solid rgba(255, 255, 255, 0.1);
         margin: 0 auto;
@@ -787,7 +787,7 @@ footer p {
     
     .mobile-logo {
         height: 25px;
-        filter: drop-shadow(0 0 5px rgba(0, 86, 179, 0.5));
+        filter: drop-shadow(0 0 5px rgba(0, 86, 179, 0.3)); /* Reduced blue glow */
     }
     
     .mobile-app-content {
@@ -954,7 +954,8 @@ footer p {
         max-width: 320px;
         justify-content: center;
         border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 86, 179, 0.3), 
+                    0 0 10px rgba(0, 0, 0, 0.5);
         width: 100%;
     }
     
